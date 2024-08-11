@@ -1,6 +1,7 @@
 package ru.prostostudia.homeworkapione;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import ru.prostostudia.homeworkapione.exceptions.EmployeeAlreadyAddedException;
@@ -8,6 +9,7 @@ import ru.prostostudia.homeworkapione.exceptions.EmployeeNotFoundException;
 import ru.prostostudia.homeworkapione.exceptions.EmployeeStorageIsFullException;
 
 @RestController
+@RequestMapping("/employee")
 public class EmployeeController {
 
     private final EmployeeServiceInterface employeeService;
